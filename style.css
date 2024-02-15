@@ -124,6 +124,7 @@ body {
     color: red;
     position: absolute;
     top: 100px;
+    background-color: rgba(0,0,0,0.7);
 }
 
 #player-missile {
@@ -183,7 +184,8 @@ body {
 
 #try-again-button {
     position: absolute;
-    top: 100px;
+    top: 250px;
+    left: 390px;
 }
 
 #intro {

@@ -62,19 +62,19 @@
                 </p>
                 <p>
                     <strong id="p4">
-                    As the last line of defense,
-                    brave pilots from across the galaxy must rise
-                    to confront this extraterrestrial menace
-                    and safeguard the future of all life.
-                </strong>
+                        As the last line of defense,
+                        brave pilots from across the galaxy must rise
+                        to confront this extraterrestrial menace
+                        and safeguard the future of all life.
+                    </strong>
                 </p>
 
                 <p>
                     <strong id="p5">
-                    Prepare for an epic battle of cosmic proportions,
-                    where bravery will be tested, alliances will be forged,
-                    and the fate of the universe will be decided
-                    in the relentless onslaught of the Space Intruders!
+                        Prepare for an epic battle of cosmic proportions,
+                        where bravery will be tested, alliances will be forged,
+                        and the fate of the universe will be decided
+                        in the relentless onslaught of the Space Intruders!
                     </strong>
                 </p>
                 <button id="start-button" onclick="startGame()">Start Game</button>
@@ -84,12 +84,23 @@
         <!--Game Over Overlay-->
         <div id="game-over">
             <h1 id="gameover-message">Game Over</h1>
+            <p id="lose-game-message">
+                <strong>
+                    You've been defeated by the Space Intruders. 
+                    Paving them the way to invade our universe and destroy it all.
+                    Your failure will be the doom of humanity, loser.
+                 </strong>
+            </p>
             <button id="try-again-button" onclick="window.location.reload()">Try Again</button>
         </div>
         <!--Congratulations Overlay-->
         <div id="grats">
             <h1 id="grats-message">Congratulations</h1>
-            <p id="win-game-message" style="display:none"> <strong>Good job pilot, you saved our galaxy from being invaded by the Space Intruders, space minstrels will sing songs of your heroic deeds for the next centuries.</strong></p>
+            <p id="win-game-message" style="display:none">
+                <strong>Good job pilot, you saved our galaxy from being invaded
+                    by the Space Intruders, space minstrels will sing songs
+                    of your heroic deeds for the next centuries.</strong>
+            </p>
             <button id="next-level-button" onclick="setNextLevel()">Next Level</button>
         </div>
     </div>
