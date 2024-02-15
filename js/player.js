@@ -105,11 +105,18 @@ function movePlayerMissile() {
     enemies.forEach(enemy => {
 
         if (checkCollision(playerMissile, enemy)) {
-            enemy.remove();
+           
+            if(enemy.id != "boss") {
+                enemy.remove();
+                score += 20;
+                document.getElementById("score").innerHTML = "<strong>Score: " + score + " </strong>";
+            } else {
+                enemy.health--;
+                console.log("boss health = ", enemy.health)
+            }
+            
             playerMissile.remove();
             playerMissileFired = false;
-            score += 20;
-            document.getElementById("score").innerHTML = "<strong>Score: " + score + " </strong>";
         }
     });
 

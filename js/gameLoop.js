@@ -8,7 +8,7 @@ function animate() {
 
     NBanimation++;
 
-    moveEnemy(isPaused);
+    moveEnemy();
 
     if(isPaused === false) {
         movePlayer();
@@ -47,7 +47,12 @@ function animate() {
             printHealth();
         }
 
+        if(enemy.id === "boss" && enemy.health === 0) {
+            enemy.remove();
+        }
+
     });
+
 
     if(enemies.length === 0) {
         congratulations();

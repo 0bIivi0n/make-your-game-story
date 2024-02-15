@@ -6,6 +6,28 @@ var missileXPos;
 var IDanimation = 0;
 var enemySpeed = 0.5;
 
+function spawnBoss() {
+
+    var enemyContainer = document.getElementById("enemy-container");
+
+    var boss = document.createElement("div");
+    console.log("boss div created");
+    boss.health = 100;
+    console.log("boss health intialized = ", boss.health);
+    boss.id = "boss";
+    boss.classList.add("enemy");
+
+    var enemyImage = document.createElement("img");
+    enemyImage.classList.add("enemyImage");
+    enemyImage.src = "assets/img/invaders3.svg";
+    
+
+    boss.appendChild(enemyImage);
+    boss.style.left = "60px";
+    enemyContainer.appendChild(boss);
+    
+}
+
 function spawnEnemies(add) {
 
     if (add != null) {
@@ -62,6 +84,9 @@ function moveEnemy(isPaused) {
     let rightBorder = document.getElementById("border-right");
     let leftBorder = document.getElementById("border-left");
     const enemy = document.getElementById("enemy-container");
+    if (wave === 3) {
+        enemy.style.width = "300px";
+    }
     var enemyLimits = enemy.getBoundingClientRect(enemy);
     var leftBorderLimits = leftBorder.getBoundingClientRect(leftBorder);
     var rightBorderLimits = rightBorder.getBoundingClientRect(rightBorder);
@@ -125,7 +150,12 @@ function makeEnemyShoot() {
         var enemyYPos = Number((getComputedStyle(randEnemy).top).split('px')[0]);
         //console.log(enemyPos);
 
-        enemyPos += 25;
+        if(wave === 3) {
+            enemyPos += 100;
+        } else {
+            enemyPos += 25;
+        }
+        
         enemyYPos += 25;
         missileXPos = enemyPos;
 

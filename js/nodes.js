@@ -15,5 +15,8 @@ const rightBorder = document.getElementById("border-right");
 const pauseMenu = document.getElementById("pause-menu");
 const introText = document.getElementById("intro-text");
 const introScreen = document.getElementById("intro");
+
 var leftBorderLimits = leftBorder.getBoundingClientRect(leftBorder);
 var rightBorderLimits = rightBorder.getBoundingClientRect(rightBorder);
+
+var enemyContainer = document.getElementById("enemy-container");

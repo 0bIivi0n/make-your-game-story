@@ -73,6 +73,11 @@ body {
     position: absolute;
 }
 
+#boss {
+    width: 200px;
+    height: 200px;
+}
+
 .enemyImage {
     width: 100%;
 }
@@ -210,4 +215,10 @@ body {
     position: absolute;
     top: 250px;
     left: 400px;
+}
+
+#skip-button {
+    position: absolute;
+    top: 450px;
+    left: 750px;
 }
